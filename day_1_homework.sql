@@ -22,6 +22,9 @@ order by count(film_id) desc
 
 -- Question 4
 -- There is no customer with the last name 'William', but there is one with the last name "williams".
+select *
+from customer
+where last_name like 'William%'
 
 -- Question 5
 -- Staff_id 1 sold 8040 rentals
@@ -46,6 +49,13 @@ from film_actor
 select *
 from customer
 where last_name like '%es'
+
+-- Question 9
+-- 3 payment amounts 
+select count(amount), amount from payment
+where customer_id between 380 and 430
+group by amount having count(amount) > 250
+
 
 -- Question 10
 -- PG-13 has the most movies total, with there being 5 categories.
