@@ -5,7 +5,7 @@ select first_name, last_name
 from actor
 where last_name like 'Wahlberg';
 
--- Questin 2
+-- Question 2
 -- 3 payments
 
 select customer_id, amount 
@@ -21,7 +21,9 @@ group by film_id
 order by count(film_id) desc
 
 -- Question 4
+-----------------------------------------------------------------------------------------------------
 -- There is no customer with the last name 'William', but there is one with the last name "williams".
+-----------------------------------------------------------------------------------------------------
 select *
 from customer
 where last_name like 'William%'
